@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ShoppingPage"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView2"
+                app:layout_constraintBottom_toTopOf="@+id/textView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="88dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/harry_potter"
+                android:textColor="@color/orange_hp"
+                android:textSize="34sp" />
+
+            <TextView
+                android:id="@+id/textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/bookstore"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
+
+            <ImageView
+                android:id="@+id/cart_image"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/cart2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/book_1_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:srcCompat="@drawable/hp_1"
+                android:layout_width="140dp"
+                android:layout_height="210dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="20dp" />
+
+            <Button
+                android:id="@+id/book_1_button"
+                app:layout_constraintEnd_toStartOf="@+id/book_2_button"
+                app:layout_constraintHorizontal_bias="0.379"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/book_1_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="@color/button_light_orange"
+                android:text="@string/add_to_cart"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/book_2_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.953"
+                app:layout_constraintStart_toEndOf="@+id/book_1_image"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:srcCompat="@drawable/hp_2"
+                android:layout_width="140dp"
+                android:layout_height="210dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="44dp" />
+
+            <Button
+                android:id="@+id/book_2_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.812"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/book_1_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/button_light_orange"
+                android:text="@string/add_to_cart"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/book_3_image"
+                app:layout_constraintEnd_toEndOf="@+id/book_1_image"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/book_1_button"
+                app:srcCompat="@drawable/hp_3"
+                android:layout_width="140dp"
+                android:layout_height="210dp"
+                android:layout_marginTop="44dp" />
+
+            <Button
+                android:id="@+id/book_3_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/button_light_orange"
+                android:text="@string/add_to_cart"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.188"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/book_3_image" />
+
+            <ImageView
+                android:id="@+id/book_4_image"
+                app:layout_constraintEnd_toEndOf="@+id/book_2_image"
+                app:layout_constraintTop_toTopOf="@+id/book_3_image"
+                app:srcCompat="@drawable/hp_4"
+                android:layout_width="140dp"
+                android:layout_height="214dp" />
+
+            <Button
+                android:id="@+id/book_4_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.474"
+                app:layout_constraintStart_toEndOf="@+id/book_3_button"
+                app:layout_constraintTop_toTopOf="@+id/book_3_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="@color/button_light_orange"
+                android:text="@string/add_to_cart"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/book_5_image"
+                android:layout_width="140dp"
+                android:layout_height="210dp"
+                android:layout_marginTop="24dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.191"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/book_3_button"
+                app:srcCompat="@drawable/hp_5" />
+
+            <Button
+                android:id="@+id/book_5_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="32dp"
+                android:backgroundTint="@color/button_light_orange"
+                android:text="@string/add_to_cart"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.22"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/book_5_image" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
