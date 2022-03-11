@@ -6,7 +6,7 @@
     app:startDestination="@id/shoppingPage">
     <fragment
         android:id="@+id/shoppingPage"
-        android:name="com.example.angela.harrypotterbooksapp.ShoppingPage"
+        android:name="com.example.angela.harrypotterbooksapp.store.StoreFragment"
         android:label="fragment_shopping_page"
         tools:layout="@layout/fragment_shopping_page" >
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/cart"
-        android:name="com.example.angela.harrypotterbooksapp.Cart"
+        android:name="com.example.angela.harrypotterbooksapp.cart.CartFragment"
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
 </navigation>
