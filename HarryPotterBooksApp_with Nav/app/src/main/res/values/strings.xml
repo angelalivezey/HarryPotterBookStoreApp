@@ -20,4 +20,7 @@
     <string name="cart_placeholder">CART PLACEHOLDER</string>
     <string name="string_cart_placeholder" />
     <string name="cart">CART</string>
+    <string name="Add">+</string>
+    <string name="add">+</string>
+    <string name="add_a_book">+</string>
 </resources>

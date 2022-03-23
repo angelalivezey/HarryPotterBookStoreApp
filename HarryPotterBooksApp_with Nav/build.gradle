@@ -2,7 +2,7 @@
 buildscript {
     ext{
         //added this
-        version_navigation = "2.3.0"
+        version_navigation = '2.4.1'
         version_kotlin = "1.3.72"
     }
     repositories {
@@ -10,7 +10,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:7.0.4"
+        classpath 'com.android.tools.build:gradle:7.1.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
         //added the two dependancies below
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$version_kotlin"

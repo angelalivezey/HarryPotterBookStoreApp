@@ -6,11 +6,11 @@ import androidx.lifecycle.ViewModel
 
 class CartViewModel :ViewModel() {
     //setting book quantities to be live data, setting them to be zero to start
-    private val _bookOneQuantity = MutableLiveData(0)
+    private val _bookOneQuantity = MutableLiveData<Int>()
     val bookOneQuantity: LiveData<Int>
     get() = _bookOneQuantity
 
-    private val _bookTwoQuantity = MutableLiveData(0)
+    private val _bookTwoQuantity = MutableLiveData<Int>(0)
     val bookTwoQuantity: LiveData<Int>
         get() = _bookTwoQuantity
 
@@ -26,8 +26,13 @@ class CartViewModel :ViewModel() {
     val bookFiveQuantity: LiveData<Int>
         get() = _bookFiveQuantity
 
-
-
+    //TODO initialize here or above?
+init {
+    _bookOneQuantity.value = 0
+}
+fun addOne(){
+    _bookOneQuantity.value = 1
+}
 
 
 }
