@@ -6,33 +6,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import com.example.angela.harrypotterbooksapp.R
 import com.example.angela.harrypotterbooksapp.databinding.FragmentCartBinding
 import com.example.angela.harrypotterbooksapp.databinding.FragmentShoppingPageBinding
+import com.example.angela.harrypotterbooksapp.model.SharedViewModel
 
 class CartFragment : Fragment() {
     //before onCreateView - create a reference to the view model for this fragment
-  private lateinit var viewModel: CartViewModel
-    private lateinit var binding: FragmentCartBinding
-
+    private val sharedViewModel: SharedViewModel by activityViewModels()
+    private var binding: FragmentCartBinding? = null
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(
-            inflater,
-            R.layout.fragment_cart,
-            container,
-            false
-        )
-        viewModel = ViewModelProvider(this).get(CartViewModel::class.java)
-
-    binding.cartViewModel = viewModel
-
-        return binding.root
+        val fragmentBinding = FragmentCartBinding.inflate(inflater, container, false)
+        binding = fragmentBinding
+        return fragmentBinding.root
     }
 
 }

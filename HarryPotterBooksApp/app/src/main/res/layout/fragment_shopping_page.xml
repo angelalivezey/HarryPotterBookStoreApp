@@ -5,8 +5,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 <data>
     <variable
-        name="storeViewModel"
-        type="com.example.angela.harrypotterbooksapp.store.StoreViewModel" />
+        name="sharedViewModel"
+        type="com.example.angela.harrypotterbooksapp.model.SharedViewModel" />
 </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"

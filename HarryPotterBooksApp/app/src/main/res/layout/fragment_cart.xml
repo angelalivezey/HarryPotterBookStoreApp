@@ -5,8 +5,8 @@
 
     <data>
 <variable
-    name="cartViewModel"
-    type="com.example.angela.harrypotterbooksapp.cart.CartViewModel" />
+    name="sharedViewModel"
+    type="com.example.angela.harrypotterbooksapp.model.SharedViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -41,7 +41,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4"
             app:layout_constraintVertical_bias="0.0"
-            tools:text="@{@string/book_1_reciept_view(cartViewModel.bookOneQuantity)}" />
+            tools:text="@{@string/book_1_reciept_view(sharedViewModel.bookOneQuantity)}" />
 
         <Button
             android:id="@+id/button_add_B1"
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="70dp"
             android:layout_marginTop="16dp"
-            android:text="@{@string/book_2_reciept_view(cartViewModel.bookTwoQuantity)}"
+            android:text="@{@string/book_2_reciept_view(sharedViewModel.bookTwoQuantity)}"
             app:layout_constraintBottom_toTopOf="@+id/book_3_reciept_view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="70dp"
             android:layout_marginTop="16dp"
-            android:text="@{@string/book_3_reciept_view(cartViewModel.bookThreeQuantity)}"
+            android:text="@{@string/book_3_reciept_view(sharedViewModel.bookThreeQuantity)}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="70dp"
             android:layout_marginTop="16dp"
-            android:text="@{@string/book_4_reciept_view(cartViewModel.bookFourQuantity)}"
+            android:text="@{@string/book_4_reciept_view(sharedViewModel.bookFourQuantity)}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -98,7 +98,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="70dp"
             android:layout_marginTop="16dp"
-            android:text="@{@string/book_5_reciept_view(cartViewModel.bookFiveQuantity)}"
+            android:text="@{@string/book_5_reciept_view(sharedViewModel.bookFiveQuantity)}"
             app:layout_constraintBottom_toTopOf="@+id/subtotalTextView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
