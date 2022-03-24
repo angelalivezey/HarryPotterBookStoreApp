@@ -4,12 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.angela.harrypotterbooksapp.R
-import com.example.angela.harrypotterbooksapp.cart.CartViewModel
 import com.example.angela.harrypotterbooksapp.databinding.FragmentShoppingPageBinding
 import com.example.angela.harrypotterbooksapp.model.SharedViewModel
 
@@ -26,7 +23,22 @@ class StoreFragment : androidx.fragment.app.Fragment() {
         binding = fragmentBinding
         return fragmentBinding.root
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        binding?.apply {
+            // Set up the button click listeners
+            cartImage.setOnClickListener { navToCart() }
+
+        }
+    }
+
+
+    private fun navToCart(){
+        findNavController().navigate(R.id.action_shoppingPage_to_cart)
+    }
 
     }
+
+
 

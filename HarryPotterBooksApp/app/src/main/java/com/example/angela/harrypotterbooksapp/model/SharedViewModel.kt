@@ -4,11 +4,12 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
+private const val PRICE_PER_BOOK = 8.00
+
 class SharedViewModel : ViewModel() {
         //setting book quantities to be live data, setting them to be zero to start
-        private val _bookOneQuantity = MutableLiveData<Int>()
-        val bookOneQuantity: LiveData<Int>
-        get() = _bookOneQuantity
+        private val _bookOneQuantity = MutableLiveData<Int>(0)
+        val bookOneQuantity: LiveData<Int> = _bookOneQuantity
 
         private val _bookTwoQuantity = MutableLiveData<Int>(0)
         val bookTwoQuantity: LiveData<Int>
@@ -26,11 +27,9 @@ class SharedViewModel : ViewModel() {
         val bookFiveQuantity: LiveData<Int>
         get() = _bookFiveQuantity
 
-        //TODO initialize here or above?
-        init {
-            _bookOneQuantity.value = 0
-        }
+//        //TODO initialize here or above?
+
         fun addOne(){
-            _bookOneQuantity.value = 1
+            _bookOneQuantity.postValue(bookOneQuantity.value?.plus(1))
         }
     }

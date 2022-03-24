@@ -24,8 +24,31 @@ class CartFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val fragmentBinding = FragmentCartBinding.inflate(inflater, container, false)
+        //added this sean mtg
+        fragmentBinding.sharedViewModel = sharedViewModel
         binding = fragmentBinding
+        //fragmentBinding.setLifecycleOwner(this)
         return fragmentBinding.root
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        binding?.apply {
+            // Set up the button click listeners
+            buttonAddB1.setOnClickListener { (sharedViewModel?.addOne()) }
+
+        }
+    }
+
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+////        apply is a scope function in the Kotlin standard library.
+////        It executes a block of code within the context of an object.
+////        It forms a temporary scope, and in that scope, you can access the object
+////        without its name. The common use case for apply is to configure an object.
+////        Such calls can be read as "apply the following assignments to the object."
+//        binding?.apply {
+//            viewModel = sharedViewModel
+//        }
+//    }
 }

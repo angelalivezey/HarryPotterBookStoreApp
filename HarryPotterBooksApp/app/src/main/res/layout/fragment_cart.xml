@@ -41,7 +41,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4"
             app:layout_constraintVertical_bias="0.0"
-            tools:text="@{@string/book_1_reciept_view(sharedViewModel.bookOneQuantity)}" />
+            android:text="@{@string/book_1_reciept_view(sharedViewModel.bookOneQuantity)}" />
 
         <Button
             android:id="@+id/button_add_B1"
