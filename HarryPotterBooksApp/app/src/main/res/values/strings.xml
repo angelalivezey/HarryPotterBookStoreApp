@@ -10,7 +10,7 @@
     <string name="subtotalBeforeDiscount">Subtotal: $ %.2f</string>
     <string name="apply_discounts_button">Apply Discounts</string>
     <string name="new_title">HARRY POTTER BOOKSTORE</string>
-    <string name="book_1_reciept_view">Book One - Quantity: %d</string>
+    <string name="book_1_reciept_view">Book One - Quantity: %s</string>
     <string name="book_2_reciept_view">Book Two - Quantity: %1$d</string>
     <string name="book_3_reciept_view">Book Three - Quantity: %1$d</string>
     <string name="book_4_reciept_view">Book Four - Quantity: %1$d</string>

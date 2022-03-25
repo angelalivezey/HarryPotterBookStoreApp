@@ -20,6 +20,7 @@ class StoreFragment : androidx.fragment.app.Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val fragmentBinding = FragmentShoppingPageBinding.inflate(inflater, container, false)
+        fragmentBinding.sharedViewModel = sharedViewModel
         binding = fragmentBinding
         return fragmentBinding.root
     }
@@ -39,6 +40,3 @@ class StoreFragment : androidx.fragment.app.Fragment() {
     }
 
     }
-
-
-

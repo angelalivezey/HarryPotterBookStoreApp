@@ -24,7 +24,7 @@ class CartFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val fragmentBinding = FragmentCartBinding.inflate(inflater, container, false)
-        //added this sean mtg
+
         fragmentBinding.sharedViewModel = sharedViewModel
         binding = fragmentBinding
         //fragmentBinding.setLifecycleOwner(this)
