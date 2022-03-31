@@ -22,6 +22,8 @@ class StoreFragment : androidx.fragment.app.Fragment() {
         val fragmentBinding = FragmentShoppingPageBinding.inflate(inflater, container, false)
         fragmentBinding.sharedViewModel = sharedViewModel
         binding = fragmentBinding
+        //solved data not updatng between fragments
+        binding?.lifecycleOwner = viewLifecycleOwner
         return fragmentBinding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

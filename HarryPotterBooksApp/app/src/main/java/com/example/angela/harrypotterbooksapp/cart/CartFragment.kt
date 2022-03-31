@@ -27,7 +27,9 @@ class CartFragment : Fragment() {
 
         fragmentBinding.sharedViewModel = sharedViewModel
         binding = fragmentBinding
-        //fragmentBinding.setLifecycleOwner(this)
+        //solved data not updatng between fragments
+        binding?.lifecycleOwner = viewLifecycleOwner
+
         return fragmentBinding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
