@@ -33,11 +33,11 @@ class StoreFragment : androidx.fragment.app.Fragment() {
         binding?.apply {
             // Set up the button click listeners
             cartImage.setOnClickListener { navToCart() }
-            book1Button.setOnClickListener { (sharedViewModel?.addBookOneToCart()) }
-            book2Button.setOnClickListener { (sharedViewModel?.addBookTwoToCart()) }
-            book3Button.setOnClickListener { (sharedViewModel?.addBookThreeToCart()) }
-            book4Button.setOnClickListener { (sharedViewModel?.addBookFourToCart()) }
-            book5Button.setOnClickListener { (sharedViewModel?.addBookFiveToCart()) }
+            book1Button.setOnClickListener { (sharedViewModel?.addBookOneToCart()); sharedViewModel?.addPriceToSubtotal() }
+            book2Button.setOnClickListener { (sharedViewModel?.addBookTwoToCart()); sharedViewModel?.addPriceToSubtotal() }
+            book3Button.setOnClickListener { (sharedViewModel?.addBookThreeToCart()); sharedViewModel?.addPriceToSubtotal() }
+            book4Button.setOnClickListener { (sharedViewModel?.addBookFourToCart()); sharedViewModel?.addPriceToSubtotal() }
+            book5Button.setOnClickListener { (sharedViewModel?.addBookFiveToCart()); sharedViewModel?.addPriceToSubtotal() }
         }
     }
 

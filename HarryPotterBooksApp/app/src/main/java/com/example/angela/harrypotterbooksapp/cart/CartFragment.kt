@@ -28,34 +28,33 @@ class CartFragment : Fragment() {
 
         return fragmentBinding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
             // add books to cart
-            buttonAddB1.setOnClickListener { (sharedViewModel?.addBookOneToCart()) }
-            buttonAddBook2.setOnClickListener{(sharedViewModel?.addBookTwoToCart())}
-            buttonAddBook3.setOnClickListener{(sharedViewModel?.addBookThreeToCart())}
-            buttonAddBook4.setOnClickListener{(sharedViewModel?.addBookFourToCart())}
-            buttonAddBook5.setOnClickListener{(sharedViewModel?.addBookFiveToCart())}
+            buttonAddB1.setOnClickListener { sharedViewModel?.addBookOneToCart(); sharedViewModel?.addPriceToSubtotal() }
+            buttonAddBook2.setOnClickListener { sharedViewModel?.addBookTwoToCart(); sharedViewModel?.addPriceToSubtotal() }
+            buttonAddBook3.setOnClickListener { sharedViewModel?.addBookThreeToCart(); sharedViewModel?.addPriceToSubtotal() }
+            buttonAddBook4.setOnClickListener { sharedViewModel?.addBookFourToCart(); sharedViewModel?.addPriceToSubtotal() }
+            buttonAddBook5.setOnClickListener { sharedViewModel?.addBookFiveToCart(); sharedViewModel?.addPriceToSubtotal() }
             //subtract books from cart
-            buttonSubtractB1.setOnClickListener{(sharedViewModel?.subtractBookOneFromCart())}
-            buttonSubtractBook2.setOnClickListener{(sharedViewModel?.subtractBookTwoFromCart())}
-            buttonSubtractBook3.setOnClickListener{(sharedViewModel?.subtractBookThreeFromCart())}
-            buttonSubtractBook4.setOnClickListener{(sharedViewModel?.subtractBookFourFromCart())}
-            buttonSubtractBook5.setOnClickListener{(sharedViewModel?.subtractBookFiveFromCart())}
-
+            buttonSubtractB1.setOnClickListener { sharedViewModel?.subtractBookOneFromCart(); sharedViewModel?.subtractPriceFromSubtotal() }
+            buttonSubtractBook2.setOnClickListener { sharedViewModel?.subtractBookTwoFromCart(); sharedViewModel?.subtractPriceFromSubtotal() }
+            buttonSubtractBook3.setOnClickListener { sharedViewModel?.subtractBookThreeFromCart(); sharedViewModel?.subtractPriceFromSubtotal() }
+            buttonSubtractBook4.setOnClickListener { sharedViewModel?.subtractBookFourFromCart(); sharedViewModel?.subtractPriceFromSubtotal() }
+            buttonSubtractBook5.setOnClickListener { sharedViewModel?.subtractBookFiveFromCart(); sharedViewModel?.subtractPriceFromSubtotal() }
 
         }
     }
 
-////        apply is a scope function in the Kotlin standard library.
-////        It executes a block of code within the context of an object.
-////        It forms a temporary scope, and in that scope, you can access the object
-////        without its name. The common use case for apply is to configure an object.
-////        Such calls can be read as "apply the following assignments to the object."
+//      apply is a scope function in the Kotlin standard library.
+//        It executes a block of code within the context of an object.
+//        It forms a temporary scope, and in that scope, you can access the object
+//        without its name. The common use case for apply is to configure an object.
+//        Such calls can be read as "apply the following assignments to the object."
 //        binding?.apply {
 //            viewModel = sharedViewModel
 //        }
-//    }
 }

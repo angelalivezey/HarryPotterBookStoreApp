@@ -4,9 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-private const val PRICE_PER_BOOK = 8.00
+
 
 class SharedViewModel : ViewModel() {
+    private val pricePerBook= 8.00
     //setting book quantities to be live data, setting them to be zero to start
     private val _bookOneQuantity = MutableLiveData<Int>(0)
     val bookOneQuantity: LiveData<Int> = _bookOneQuantity
@@ -25,6 +26,7 @@ class SharedViewModel : ViewModel() {
 
     private val _subtotal = MutableLiveData(0.00)
     val subtotal: MutableLiveData<Double> = _subtotal
+
 
     //add functions
     fun addBookOneToCart() {
@@ -66,6 +68,14 @@ class SharedViewModel : ViewModel() {
 
     fun subtractBookFiveFromCart() {
         _bookFiveQuantity.value = bookFiveQuantity.value?.minus(1)
+    }
+
+    fun addPriceToSubtotal(){
+       _subtotal.value = subtotal.value?.plus(pricePerBook)
+    }
+
+    fun subtractPriceFromSubtotal(){
+        _subtotal.value = subtotal.value?.minus(pricePerBook)
     }
 
 }
