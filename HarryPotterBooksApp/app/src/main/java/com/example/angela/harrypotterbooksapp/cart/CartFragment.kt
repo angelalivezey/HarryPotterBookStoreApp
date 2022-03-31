@@ -36,8 +36,20 @@ class CartFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
-            // Set up the button click listeners
-            buttonAddB1.setOnClickListener { (sharedViewModel?.addOne()) }
+            // add books to cart
+            buttonAddB1.setOnClickListener { (sharedViewModel?.addBookOneToCart()) }
+            buttonAddBook2.setOnClickListener{(sharedViewModel?.addBookTwoToCart())}
+            buttonAddBook3.setOnClickListener{(sharedViewModel?.addBookThreeToCart())}
+            buttonAddBook4.setOnClickListener{(sharedViewModel?.addBookFourToCart())}
+            buttonAddBook5.setOnClickListener{(sharedViewModel?.addBookFiveToCart())}
+            //subtract books from cart
+            buttonSubtractB1.setOnClickListener{(sharedViewModel?.subtractBookOneFromCart())}
+            buttonSubtractBook2.setOnClickListener{(sharedViewModel?.subtractBookTwoFromCart())}
+            buttonSubtractBook3.setOnClickListener{(sharedViewModel?.subtractBookThreeFromCart())}
+            buttonSubtractBook4.setOnClickListener{(sharedViewModel?.subtractBookFourFromCart())}
+            buttonSubtractBook5.setOnClickListener{(sharedViewModel?.subtractBookFiveFromCart())}
+
+
 
         }
     }
