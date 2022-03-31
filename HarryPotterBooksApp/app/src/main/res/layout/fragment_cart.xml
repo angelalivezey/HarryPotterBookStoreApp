@@ -237,13 +237,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="52dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="@string/subtotalBeforeDiscount"
+            android:text="@{@string/subtotalBeforeDiscount(sharedViewModel.subtotal)}"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/book_5_reciept_view" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

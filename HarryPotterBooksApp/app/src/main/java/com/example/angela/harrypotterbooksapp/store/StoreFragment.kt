@@ -26,19 +26,23 @@ class StoreFragment : androidx.fragment.app.Fragment() {
         binding?.lifecycleOwner = viewLifecycleOwner
         return fragmentBinding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
             // Set up the button click listeners
             cartImage.setOnClickListener { navToCart() }
-
+            book1Button.setOnClickListener { (sharedViewModel?.addBookOneToCart()) }
+            book2Button.setOnClickListener { (sharedViewModel?.addBookTwoToCart()) }
+            book3Button.setOnClickListener { (sharedViewModel?.addBookThreeToCart()) }
+            book4Button.setOnClickListener { (sharedViewModel?.addBookFourToCart()) }
+            book5Button.setOnClickListener { (sharedViewModel?.addBookFiveToCart()) }
         }
     }
 
 
-    private fun navToCart(){
+    private fun navToCart() {
         findNavController().navigate(R.id.action_shoppingPage_to_cart)
     }
-
-    }
+}
