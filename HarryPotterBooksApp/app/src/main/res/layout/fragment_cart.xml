@@ -33,92 +33,217 @@
             android:id="@+id/book_1_reciept_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="24dp"
+            android:text="@{@string/book_1_reciept_view(sharedViewModel.bookOneQuantity)}"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/book_2_reciept_view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4"
-            app:layout_constraintVertical_bias="0.0"
-            android:text="@{@string/book_1_reciept_view(sharedViewModel.bookOneQuantity)}" />
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/button_subtract_B1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="@color/button_light_orange"
+            android:text="-"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/button_add_B1"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
         <Button
             android:id="@+id/button_add_B1"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="40dp"
             android:backgroundTint="@color/button_light_orange"
             android:text="+"
             android:textColor="@color/black"
             android:textSize="20sp"
-            app:layout_constraintStart_toEndOf="@+id/book_1_reciept_view"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
         <TextView
             android:id="@+id/book_2_reciept_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
             android:text="@{@string/book_2_reciept_view(sharedViewModel.bookTwoQuantity)}"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/book_3_reciept_view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/book_1_reciept_view" />
 
+        <Button
+            android:id="@+id/button_subtract_book_2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="@color/button_light_orange"
+            android:text="-"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/button_add_book_2"
+            app:layout_constraintTop_toBottomOf="@+id/button_subtract_B1" />
+
+        <Button
+            android:id="@+id/button_add_book_2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="@color/button_light_orange"
+            android:text="+"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_subtract_B1" />
+
+
+
         <TextView
             android:id="@+id/book_3_reciept_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
             android:text="@{@string/book_3_reciept_view(sharedViewModel.bookThreeQuantity)}"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/book_2_reciept_view" />
 
+
+        <Button
+            android:id="@+id/button_subtract_book_3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="@color/button_light_orange"
+            android:text="-"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/button_add_book_3"
+            app:layout_constraintTop_toBottomOf="@+id/button_subtract_book_2" />
+
+        <Button
+            android:id="@+id/button_add_book_3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="@color/button_light_orange"
+            android:text="+"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_subtract_book_2" />
+
         <TextView
             android:id="@+id/book_4_reciept_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
             android:text="@{@string/book_4_reciept_view(sharedViewModel.bookFourQuantity)}"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/book_3_reciept_view" />
 
+
+        <Button
+            android:id="@+id/button_subtract_book_4"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="@color/button_light_orange"
+            android:text="-"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/button_add_book_4"
+            app:layout_constraintTop_toBottomOf="@+id/button_subtract_book_3" />
+
+        <Button
+            android:id="@+id/button_add_book_4"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="@color/button_light_orange"
+            android:text="+"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_subtract_book_3" />
+
         <TextView
             android:id="@+id/book_5_reciept_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
             android:text="@{@string/book_5_reciept_view(sharedViewModel.bookFiveQuantity)}"
-            app:layout_constraintBottom_toTopOf="@+id/subtotalTextView"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/book_4_reciept_view"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/book_4_reciept_view" />
+
+        <Button
+            android:id="@+id/button_subtract_book_5"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="@color/button_light_orange"
+            android:text="-"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/button_add_book_5"
+            app:layout_constraintTop_toBottomOf="@+id/button_subtract_book_4" />
+
+        <Button
+            android:id="@+id/button_add_book_5"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="@color/button_light_orange"
+            android:text="+"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_subtract_book_4" />
 
         <TextView
             android:id="@+id/subtotalTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="46dp"
+            android:layout_marginTop="52dp"
             android:fontFamily="@font/poppins_bold"
             android:text="@string/subtotalBeforeDiscount"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/book_4_reciept_view" />
+            app:layout_constraintTop_toBottomOf="@+id/book_5_reciept_view" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
